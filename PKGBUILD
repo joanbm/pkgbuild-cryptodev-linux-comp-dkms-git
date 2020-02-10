@@ -1,9 +1,10 @@
 # Maintainer: Robin McCorkell <robin@mccorkell.me.uk>
 # Contributor: Joan Bruguera Micó <joanbrugueram@gmail.com>
 
-pkgname=cryptodev-linux
-pkgver=1.10
-pkgrel=0
+_pkgname=cryptodev-linux-comp
+pkgname=${_pkgname}-git
+pkgver=r375.02931ca
+pkgrel=1
 pkgdesc="cryptodev Linux module"
 url='http://cryptodev-linux.org/'
 license=("GPL")
@@ -12,27 +13,22 @@ makedepends=('linux-headers')
 conflicts=('cryptodev_friendly')
 provides=('cryptodev_friendly')
 optdepends=('openssl-cryptodev: OpenSSL with cryptodev support')
-source=(https://github.com/${pkgname}/${pkgname}/archive/${pkgname}-${pkgver}.tar.gz
-        https://github.com/cryptodev-linux/cryptodev-linux/commit/f971e0cd4a0ebe59fb2e8e17240399bf6901b09b.patch
-        https://github.com/cryptodev-linux/cryptodev-linux/commit/98b163a23f6b9fbdc18c3644cf94a75cdcd0cc80.patch)
-sha256sums=('833ab7c5c88d2b700a7c702a151254c089a3058886a63cc7d12630e364b8ea83'
-            '66bb2786fcc5d05d5877280c797dee9a835a1ca87c5a78d400cd8310c738a4e6'
-            'a536b375e59cc39119082a0cb30e8463e3df5094028652a49640e7d1baebc92f')
-install=${pkgname}.install
+source=('cryptodev-linux-comp::git+https://github.com/plauth/cryptodev-linux')
+sha256sums=('SKIP')
+install=${_pkgname}.install
 
-prepare() {
-  cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
-  patch -Np1 -i "${srcdir}/f971e0cd4a0ebe59fb2e8e17240399bf6901b09b.patch"
-  patch -Np1 -i "${srcdir}/98b163a23f6b9fbdc18c3644cf94a75cdcd0cc80.patch"
+pkgver() {
+  cd "${srcdir}/${_pkgname}"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
   make
 }
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
+  cd "${srcdir}/${_pkgname}"
   make INSTALL_MOD_PATH=${pkgdir}/usr DESTDIR=${pkgdir} PREFIX=${pkgdir} install
   rm -Rf "${pkgdir}"/usr/lib/modules/*/modules.*
 }
