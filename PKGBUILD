@@ -1,11 +1,11 @@
-# Maintainer: Robin McCorkell <robin@mccorkell.me.uk>
-# Contributor: Joan Bruguera Micó <joanbrugueram@gmail.com>
+# Maintainer: Joan Bruguera Micó <joanbrugueram@gmail.com>
+# Contributor: Robin McCorkell <robin@mccorkell.me.uk>
 
 _pkgname=cryptodev-linux-comp
 pkgname=${_pkgname}-git
 pkgver=r375.02931ca
-pkgrel=1
-pkgdesc="cryptodev Linux module"
+pkgrel=2
+pkgdesc="cryptodev Linux module (with compression support)"
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
