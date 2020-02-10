@@ -34,4 +34,5 @@ build() {
 package() {
   cd "${srcdir}/${pkgname}-${pkgname}-${pkgver}"
   make INSTALL_MOD_PATH=${pkgdir}/usr DESTDIR=${pkgdir} PREFIX=${pkgdir} install
+  rm -Rf "${pkgdir}"/usr/lib/modules/*/modules.*
 }
