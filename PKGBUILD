@@ -3,7 +3,7 @@
 
 pkgname=cryptodev-linux
 pkgver=1.10
-pkgrel=1
+pkgrel=0
 pkgdesc="cryptodev Linux module"
 url='http://cryptodev-linux.org/'
 license=("GPL")
