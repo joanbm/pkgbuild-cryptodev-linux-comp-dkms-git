@@ -1,20 +1,21 @@
-pkgbase = cryptodev-linux-comp-git
+pkgbase = cryptodev-linux-comp-dkms-git
 	pkgdesc = cryptodev Linux module (with compression support)
 	pkgver = r375.02931ca
 	pkgrel = 2
 	url = http://cryptodev-linux.org/
-	install = cryptodev-linux-comp.install
 	arch = i686
 	arch = x86_64
 	arch = armv6h
 	arch = armv7h
 	license = GPL
-	makedepends = linux-headers
+	depends = dkms
 	optdepends = openssl-cryptodev: OpenSSL with cryptodev support
 	provides = cryptodev_friendly
 	conflicts = cryptodev_friendly
 	source = cryptodev-linux-comp::git+https://github.com/plauth/cryptodev-linux
+	source = dkms.conf
 	sha256sums = SKIP
+	sha256sums = 4a9a5ab58299faa3d4c4d0f9fbfd1999e870d0a8e1288640d6a1bf8235507266
 
-pkgname = cryptodev-linux-comp-git
+pkgname = cryptodev-linux-comp-dkms-git
 
