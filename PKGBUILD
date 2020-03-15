@@ -4,7 +4,7 @@
 _pkgname=cryptodev-linux-comp
 _pkgbase=cryptodev
 pkgname=${_pkgname}-dkms-git
-pkgver=r376.3a72282
+pkgver=r379.45ba871
 pkgrel=1
 pkgdesc="cryptodev Linux module (with compression support)"
 url='http://cryptodev-linux.org/'
@@ -14,7 +14,7 @@ depends=('dkms')
 conflicts=('cryptodev_friendly')
 provides=('cryptodev_friendly')
 optdepends=('openssl-cryptodev: OpenSSL with cryptodev support')
-source=('cryptodev-linux-comp::git+https://github.com/plauth/cryptodev-linux'
+source=('cryptodev-linux-comp::git+https://github.com/joanbm/cryptodev-linux'
         'dkms.conf')
 sha256sums=('SKIP'
             '4a9a5ab58299faa3d4c4d0f9fbfd1999e870d0a8e1288640d6a1bf8235507266')
