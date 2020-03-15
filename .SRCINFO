@@ -1,7 +1,7 @@
 pkgbase = cryptodev-linux-comp-dkms-git
 	pkgdesc = cryptodev Linux module (with compression support)
-	pkgver = r375.02931ca
-	pkgrel = 2
+	pkgver = r376.3a72282
+	pkgrel = 1
 	url = http://cryptodev-linux.org/
 	arch = i686
 	arch = x86_64

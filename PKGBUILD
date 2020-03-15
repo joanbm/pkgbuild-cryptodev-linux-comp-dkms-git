@@ -4,8 +4,8 @@
 _pkgname=cryptodev-linux-comp
 _pkgbase=cryptodev
 pkgname=${_pkgname}-dkms-git
-pkgver=r375.02931ca
-pkgrel=2
+pkgver=r376.3a72282
+pkgrel=1
 pkgdesc="cryptodev Linux module (with compression support)"
 url='http://cryptodev-linux.org/'
 license=("GPL")
