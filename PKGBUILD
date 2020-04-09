@@ -4,7 +4,7 @@
 _pkgname=cryptodev-linux-comp
 _pkgbase=cryptodev
 pkgname=${_pkgname}-dkms-git
-pkgver=r383.043830b
+pkgver=r385.876fdb1
 pkgrel=1
 pkgdesc="cryptodev Linux module (with compression support)"
 url='http://cryptodev-linux.org/'
