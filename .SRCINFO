@@ -1,4 +1,4 @@
-pkgbase = cryptodev-linux-comp
+pkgbase = cryptodev-linux-comp-git
 	pkgdesc = cryptodev Linux module (with compression support)
 	pkgver = r393.adc4e35
 	pkgrel = 2
@@ -13,7 +13,7 @@ pkgbase = cryptodev-linux-comp
 	optdepends = openssl-cryptodev: OpenSSL with cryptodev support
 	provides = cryptodev_friendly
 	conflicts = cryptodev_friendly
-	source = cryptodev-linux-comp::git+https://github.com/joanbm/cryptodev-linux
+	source = cryptodev-linux-comp-git::git+https://github.com/joanbm/cryptodev-linux
 	source = dkms.conf
 	sha256sums = SKIP
 	sha256sums = 4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86

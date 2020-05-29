@@ -3,7 +3,7 @@
 # Contributor: Robin McCorkell <robin@mccorkell.me.uk>
 
 _pkgbase=cryptodev-linux
-pkgbase=cryptodev-linux-comp
+pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="cryptodev Linux module (with compression support)"
 pkgver=r393.adc4e35
