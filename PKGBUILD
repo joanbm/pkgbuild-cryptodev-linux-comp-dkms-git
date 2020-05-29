@@ -7,7 +7,7 @@ pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="cryptodev Linux module (with compression support)"
 pkgver=r393.adc4e35
-pkgrel=2
+pkgrel=3
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -28,7 +28,7 @@ pkgver() {
 
 build() {
   cd "${srcdir}/${pkgbase}"
-  make
+  make KERNEL_DIR=/usr/src/linux
 }
 
 package_cryptodev-linux-comp-git() {
@@ -36,7 +36,7 @@ package_cryptodev-linux-comp-git() {
   depends=('linux')
 
   cd "${srcdir}/${pkgbase}"
-  make INSTALL_MOD_PATH="${pkgdir}"/usr DESTDIR="${pkgdir}" PREFIX="${pkgdir}" install
+  make INSTALL_MOD_PATH="${pkgdir}"/usr DESTDIR="${pkgdir}" PREFIX="${pkgdir}" KERNEL_DIR=/usr/src/linux install
   rm -Rf "${pkgdir}"/usr/lib/modules/*/modules.*
 }
 
