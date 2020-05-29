@@ -1,3 +1,4 @@
+
 # Maintainer: Joan Bruguera Micó <joanbrugueram@gmail.com>
 # Contributor: Robin McCorkell <robin@mccorkell.me.uk>
 
@@ -6,7 +7,7 @@ pkgbase=cryptodev-linux-comp
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="cryptodev Linux module (with compression support)"
 pkgver=r393.adc4e35
-pkgrel=1
+pkgrel=2
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -45,7 +46,7 @@ package_cryptodev-linux-comp-dkms-git() {
 
   cd "${srcdir}/${pkgbase}"
   install -d "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
-  cp -r "${srcdir}/${pkgbase}/"* "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
+  cp -r ./* "${pkgdir}/usr/src/${pkgbase}-${pkgver}/"
 
   # TODO: Is there some better way to avoid copying the files created
   #       during the build process to the DKMS folder?

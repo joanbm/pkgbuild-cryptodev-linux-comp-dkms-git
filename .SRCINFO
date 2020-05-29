@@ -1,7 +1,7 @@
 pkgbase = cryptodev-linux-comp
 	pkgdesc = cryptodev Linux module (with compression support)
 	pkgver = r393.adc4e35
-	pkgrel = 1
+	pkgrel = 2
 	url = http://cryptodev-linux.org/
 	install = cryptodev-linux.install
 	arch = i686
@@ -9,7 +9,7 @@ pkgbase = cryptodev-linux-comp
 	arch = armv6h
 	arch = armv7h
 	license = GPL
-	depends = dkms
+	makedepends = linux-headers
 	optdepends = openssl-cryptodev: OpenSSL with cryptodev support
 	provides = cryptodev_friendly
 	conflicts = cryptodev_friendly
