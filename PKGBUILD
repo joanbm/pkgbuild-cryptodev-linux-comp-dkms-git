@@ -8,7 +8,7 @@ pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="Kernel module providing access to Linux kernel cryptographic drivers from userspace"
 pkgver=r393.adc4e35
-pkgrel=4
+pkgrel=5
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -33,7 +33,6 @@ build() {
 }
 
 package_cryptodev-linux-comp-git() {
-  pkgdesc="cryptodev Linux module"
   depends=('linux')
 
   cd "${srcdir}/${pkgbase}"
