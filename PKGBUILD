@@ -1,13 +1,14 @@
 
+
 # Maintainer: Joan Bruguera Micó <joanbrugueram@gmail.com>
 # Contributor: Robin McCorkell <robin@mccorkell.me.uk>
 
 _pkgbase=cryptodev-linux
 pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
-pkgdesc="cryptodev Linux module (with compression support)"
+pkgdesc="Kernel module providing access to Linux kernel cryptographic drivers from userspace"
 pkgver=r393.adc4e35
-pkgrel=3
+pkgrel=4
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -41,7 +42,7 @@ package_cryptodev-linux-comp-git() {
 }
 
 package_cryptodev-linux-comp-dkms-git() {
-  pkgdesc="cryptodev Linux module sources"
+  pkgdesc+=" - sources"
   depends=('dkms')
 
   cd "${srcdir}/${pkgbase}"

@@ -1,7 +1,7 @@
 pkgbase = cryptodev-linux-comp-git
 	pkgdesc = cryptodev Linux module (with compression support)
 	pkgver = r393.adc4e35
-	pkgrel = 3
+	pkgrel = 4
 	url = http://cryptodev-linux.org/
 	install = cryptodev-linux.install
 	arch = i686
@@ -23,6 +23,6 @@ pkgname = cryptodev-linux-comp-git
 	depends = linux
 
 pkgname = cryptodev-linux-comp-dkms-git
-	pkgdesc = cryptodev Linux module sources
+	pkgdesc = cryptodev Linux module (with compression support) - sources
 	depends = dkms
 
