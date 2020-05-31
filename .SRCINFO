@@ -1,7 +1,7 @@
 pkgbase = cryptodev-linux-comp-git
-	pkgdesc = cryptodev Linux module (with compression support)
+	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace
 	pkgver = r393.adc4e35
-	pkgrel = 3
+	pkgrel = 5
 	url = http://cryptodev-linux.org/
 	install = cryptodev-linux.install
 	arch = i686
@@ -19,10 +19,9 @@ pkgbase = cryptodev-linux-comp-git
 	sha256sums = 4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86
 
 pkgname = cryptodev-linux-comp-git
-	pkgdesc = cryptodev Linux module
 	depends = linux
 
 pkgname = cryptodev-linux-comp-dkms-git
-	pkgdesc = cryptodev Linux module sources
+	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace - sources
 	depends = dkms
 
