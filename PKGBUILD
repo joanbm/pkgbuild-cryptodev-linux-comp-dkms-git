@@ -8,7 +8,7 @@ pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="Kernel module providing access to Linux kernel cryptographic drivers from userspace"
 pkgver=r407.f20834c
-pkgrel=2
+pkgrel=3
 url='http://cryptodev-linux.org/'
 license=("GPL")
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -17,14 +17,21 @@ conflicts=('cryptodev_friendly')
 provides=('cryptodev_friendly')
 optdepends=('openssl-cryptodev: OpenSSL with cryptodev support')
 source=("$pkgbase::git+https://github.com/joanbm/cryptodev-linux"
+        "https://github.com/${_pkgbase}/${_pkgbase}/pull/51.patch"
         "dkms.conf")
 sha256sums=('SKIP'
+            '151e8e4f935c0aa1c7143450fd6d23605b10818741c756cb1b0a3b5257d357eb'
             '4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86')
 install=${_pkgbase}.install
 
 pkgver() {
   cd "${srcdir}/${pkgbase}"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+  cd "${srcdir}/${pkgbase}"
+  patch -Np1 -i "${srcdir}/51.patch"
 }
 
 build() {
