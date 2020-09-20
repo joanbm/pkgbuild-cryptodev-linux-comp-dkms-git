@@ -5,7 +5,7 @@ _pkgbase=cryptodev-linux
 pkgbase=cryptodev-linux-comp-git
 pkgname=(cryptodev-linux-comp-git cryptodev-linux-comp-dkms-git)
 pkgdesc="Kernel module providing access to Linux kernel cryptographic drivers from userspace"
-pkgver=r420.f2341c8
+pkgver=r423.412e3c3
 pkgrel=1
 url='http://cryptodev-linux.org/'
 license=("GPL")
@@ -15,21 +15,14 @@ conflicts=('cryptodev_friendly')
 provides=('cryptodev_friendly')
 optdepends=('openssl-cryptodev: OpenSSL with cryptodev support')
 source=("$pkgbase::git+https://github.com/joanbm/cryptodev-linux"
-        "0001-Fix-build-for-Linux-5.9-rc1.patch"
         "dkms.conf")
 sha256sums=('SKIP'
-            '46f032a02fb500bdbca7bd72564776271c7bc3bd73a6a43307ac104bb9a37acc'
             '4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86')
 install=${_pkgbase}.install
 
 pkgver() {
   cd "${srcdir}/${pkgbase}"
   printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-}
-
-prepare() {
-  cd "${srcdir}/${pkgbase}"
-  patch -Np1 -i "${srcdir}/0001-Fix-build-for-Linux-5.9-rc1.patch"
 }
 
 build() {

@@ -1,6 +1,6 @@
 pkgbase = cryptodev-linux-comp-git
 	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace
-	pkgver = r420.f2341c8
+	pkgver = r423.412e3c3
 	pkgrel = 1
 	url = http://cryptodev-linux.org/
 	install = cryptodev-linux.install
@@ -14,10 +14,8 @@ pkgbase = cryptodev-linux-comp-git
 	provides = cryptodev_friendly
 	conflicts = cryptodev_friendly
 	source = cryptodev-linux-comp-git::git+https://github.com/joanbm/cryptodev-linux
-	source = 0001-Fix-build-for-Linux-5.9-rc1.patch
 	source = dkms.conf
 	sha256sums = SKIP
-	sha256sums = 46f032a02fb500bdbca7bd72564776271c7bc3bd73a6a43307ac104bb9a37acc
 	sha256sums = 4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86
 
 pkgname = cryptodev-linux-comp-git
