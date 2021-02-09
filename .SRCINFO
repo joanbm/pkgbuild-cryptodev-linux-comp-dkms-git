@@ -1,6 +1,6 @@
 pkgbase = cryptodev-linux-comp-git
 	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace
-	pkgver = r423.412e3c3
+	pkgver = r427.95cb382
 	pkgrel = 1
 	url = http://cryptodev-linux.org/
 	install = cryptodev-linux.install
