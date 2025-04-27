@@ -1,7 +1,7 @@
 pkgbase = cryptodev-linux-comp-dkms-git
 	pkgdesc = Kernel module providing access to Linux kernel cryptographic drivers from userspace - sources
 	pkgver = r462.75a0944
-	pkgrel = 1
+	pkgrel = 2
 	url = http://cryptodev-linux.org/
 	arch = i686
 	arch = x86_64
@@ -16,6 +16,6 @@ pkgbase = cryptodev-linux-comp-dkms-git
 	source = cryptodev-linux-comp-dkms-git::git+https://github.com/joanbm/cryptodev-linux-comp
 	source = dkms.conf
 	sha256sums = SKIP
-	sha256sums = 4c762bbea27edeb283d44af37be2faf2df21312853b200e6b93319d563f51d86
+	sha256sums = 4f48bef024e592b6fc0c44e2eda8231ce61750a293d1ef1bba99765ab3383b75
 
 pkgname = cryptodev-linux-comp-dkms-git
